@@ -2,66 +2,68 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#050608" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="icon-192.png" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>Lanzarote 2026</title>
+  <meta name="theme-color" content="#07161d" />
+  <link rel="manifest" href="manifest.json" />
   <style>
-    :root{
-      --gold:#f6c36b;--gold2:#ffe1a1;--text:#fffaf0;--muted:#d8d1c4;--line:rgba(255,255,255,.22);
-      --glass:rgba(9,10,12,.46);--glass2:rgba(255,255,255,.10);--shadow:0 22px 70px rgba(0,0,0,.55);
-      --safe-bottom: env(safe-area-inset-bottom, 0px);
-    }
-    *{box-sizing:border-box} html{background:#030405} body{margin:0;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;overflow-x:hidden;background:#030405;}
-    .app{max-width:430px;min-height:100svh;margin:0 auto;position:relative;overflow:hidden;background:#050608;box-shadow:0 0 0 1px rgba(255,255,255,.05),0 40px 120px rgba(0,0,0,.65)}
-    .hero{position:relative;min-height:100svh;padding:52px 22px 112px;isolation:isolate;}
-    .hero::before{content:"";position:absolute;inset:0;z-index:-4;background:
-      linear-gradient(180deg,rgba(3,7,12,.10) 0%,rgba(3,7,12,.25) 28%,rgba(3,5,8,.88) 68%,#030405 100%),
-      url('sea-lanzarote.svg') center top/cover no-repeat;transform:scale(1.02);}
-    .hero::after{content:"";position:absolute;inset:0;z-index:-3;background:radial-gradient(circle at 22% 12%,rgba(255,216,140,.32),transparent 28%),radial-gradient(circle at 85% 20%,rgba(0,170,210,.18),transparent 30%),linear-gradient(90deg,rgba(0,0,0,.45),transparent 55%)}
-    .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px;animation:fadeDown .7s ease both}.round{width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.34);backdrop-filter:blur(18px);display:grid;place-items:center;color:var(--gold);box-shadow:0 8px 28px rgba(0,0,0,.28)}
-    .lines{width:20px;height:14px;display:grid;gap:4px}.lines span{display:block;height:2px;background:var(--gold);border-radius:99px}.heart{font-size:24px;line-height:1}
-    .brand{padding-top:28px;animation:rise .9s .12s ease both}.mark{display:flex;align-items:center;gap:12px;margin-bottom:14px;color:var(--gold);font-size:34px}.mark::before,.mark::after{content:"";height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);flex:1;opacity:.55}.kicker{letter-spacing:.32em;font-size:12px;font-weight:800;color:rgba(255,255,255,.76);text-transform:uppercase;margin-bottom:8px}.title{font-family:Georgia,"Times New Roman",serif;font-size:64px;line-height:.9;letter-spacing:.02em;font-weight:500;text-shadow:0 8px 34px rgba(0,0,0,.55)}.sub{margin-top:12px;color:var(--gold2);font-size:15px;letter-spacing:.23em;text-transform:uppercase;font-weight:700}.dates{display:inline-flex;align-items:center;gap:8px;margin-top:18px;border:1px solid rgba(255,255,255,.25);background:rgba(8,10,12,.36);border-radius:999px;padding:10px 13px;backdrop-filter:blur(16px);font-weight:700;color:rgba(255,255,255,.9)}
-    .count{margin:44px auto 36px;text-align:center;animation:rise .9s .25s ease both}.count small{display:block;text-transform:uppercase;letter-spacing:.36em;font-weight:800;color:rgba(255,255,255,.82);font-size:11px}.count .num{font-family:Georgia,"Times New Roman",serif;font-size:112px;line-height:.9;text-shadow:0 0 42px rgba(255,219,143,.22)}.count .days{color:var(--gold);letter-spacing:.34em;text-transform:uppercase;font-weight:800;font-size:12px}.chev{margin-top:16px;color:var(--gold);font-size:30px;animation:bounce 1.8s ease-in-out infinite}
-    .quick{display:grid;grid-template-columns:1fr 1fr;gap:14px;animation:rise .9s .38s ease both}.card{min-height:126px;border-radius:24px;position:relative;overflow:hidden;padding:16px;border:1px solid rgba(246,195,107,.42);background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05));box-shadow:var(--shadow);backdrop-filter:blur(18px);display:flex;flex-direction:column;justify-content:flex-end}.card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.72)),var(--img);background-size:cover;background-position:center;z-index:-2}.card::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 0 0,rgba(246,195,107,.18),transparent 40%);z-index:-1}.icon{width:46px;height:46px;border-radius:50%;border:1px solid rgba(246,195,107,.55);background:rgba(0,0,0,.28);display:grid;place-items:center;color:var(--gold);font-size:23px;margin-bottom:20px}.card h2{margin:0;font-size:20px;letter-spacing:.08em;text-transform:uppercase}.card p{margin:5px 0 0;color:var(--gold2);font-size:14px;line-height:1.25}.arrow{position:absolute;right:14px;bottom:18px;color:var(--gold);font-size:28px}.wide{grid-column:1/-1;min-height:116px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 14px;animation:rise .9s .32s ease both}.stat{border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.32);backdrop-filter:blur(18px);border-radius:18px;padding:12px;text-align:center}.stat b{display:block;font-size:20px}.stat span{display:block;font-size:11px;color:var(--muted);font-weight:700;margin-top:3px}.today{margin:20px 0 12px;border:1px solid rgba(255,255,255,.16);background:rgba(0,0,0,.36);backdrop-filter:blur(18px);border-radius:26px;padding:16px;animation:rise .9s .45s ease both}.today h3{margin:0 0 8px;font-size:18px}.today p{margin:0;color:rgba(255,255,255,.83);font-size:14px;line-height:1.45}.nav{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);width:min(408px,calc(100% - 22px));padding:9px 10px calc(9px + var(--safe-bottom));border:1px solid rgba(255,255,255,.18);border-radius:30px;background:rgba(4,5,7,.78);backdrop-filter:blur(28px);box-shadow:0 18px 70px rgba(0,0,0,.65);display:grid;grid-template-columns:repeat(5,1fr);z-index:20}.nav a{text-decoration:none;color:rgba(255,255,255,.7);display:grid;place-items:center;gap:4px;font-size:11px;font-weight:700}.nav a.active{color:var(--gold)}.nav i{font-style:normal;font-size:20px}.homeCircle{transform:translateY(-18px);width:60px;height:60px;border-radius:50%;border:2px solid rgba(246,195,107,.44);background:#07080a;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(0,0,0,.4)}
-    @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}} @keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}} @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
-    @media (min-width:700px){body{display:grid;place-items:start center;padding:24px;background:#0b0c0f}.app{border-radius:0;min-height:932px}.hero{min-height:932px}}
+    :root{--bg:#061116;--card:rgba(8,20,27,.62);--card2:rgba(255,255,255,.10);--text:#fff9ee;--muted:rgba(255,249,238,.72);--gold:#f0c66d;--cyan:#57d8df;--line:rgba(255,255,255,.14);--shadow:0 24px 80px rgba(0,0,0,.55);--radius:28px}*{box-sizing:border-box}html,body{margin:0;background:#061116;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif}body{min-height:100svh;overflow-x:hidden}.app{min-height:100svh;background:radial-gradient(circle at 50% -10%,rgba(68,208,219,.28),transparent 30%),linear-gradient(180deg,#07202c 0,#050b0f 55%,#030609 100%);position:relative}.sea{position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(2,7,10,.78) 60%,#030609),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85') center/cover no-repeat;opacity:.92;z-index:0}.app:before{content:"";position:fixed;inset:0;background:linear-gradient(110deg,rgba(255,255,255,.12),transparent 22%,transparent 70%,rgba(240,198,109,.12));mix-blend-mode:screen;z-index:1;pointer-events:none}.screen{position:relative;z-index:2;min-height:100svh;padding:18px 18px 94px;display:none;animation:fade .32s ease}.screen.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:max(6px,env(safe-area-inset-top))}.pill{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid var(--line);background:rgba(5,15,20,.42);backdrop-filter:blur(18px);border-radius:999px;color:var(--muted);font-size:13px}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#f3d486,#8f6424);color:#201103;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.35)}.hero{padding-top:34px;min-height:43svh;display:flex;flex-direction:column;justify-content:flex-end}.kicker{text-transform:uppercase;letter-spacing:.22em;color:var(--gold);font-size:12px;font-weight:700}.title{font-size:54px;line-height:.9;margin:8px 0 8px;font-weight:800;letter-spacing:-.06em;text-shadow:0 18px 60px rgba(0,0,0,.7)}.subtitle{font-size:16px;color:var(--muted);line-height:1.45;max-width:310px}.glass{background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.06));border:1px solid var(--line);backdrop-filter:blur(22px);box-shadow:var(--shadow);border-radius:var(--radius)}.count{margin-top:22px;padding:18px;display:grid;grid-template-columns:1fr auto;align-items:center}.count strong{font-size:42px;letter-spacing:-.05em;color:#fff}.count span{color:var(--muted);font-size:13px}.weather{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:13px 0 20px}.weather div{padding:12px 8px;text-align:center;border-radius:20px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.10)}.weather b{display:block;font-size:18px}.weather small{color:var(--muted);font-size:11px}.section-title{display:flex;justify-content:space-between;align-items:flex-end;margin:24px 0 12px}.section-title h2{margin:0;font-size:24px;letter-spacing:-.04em}.section-title a{color:var(--gold);font-size:13px;text-decoration:none}.feature{min-height:194px;border-radius:32px;overflow:hidden;position:relative;background:#123;margin-bottom:14px;box-shadow:0 20px 70px rgba(0,0,0,.45)}.feature:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0,rgba(0,0,0,.25) 35%,rgba(0,0,0,.82) 100%);z-index:1}.feature img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.feature .txt{position:absolute;z-index:2;left:18px;right:18px;bottom:16px}.tag{display:inline-flex;padding:6px 10px;background:rgba(240,198,109,.18);color:var(--gold);border:1px solid rgba(240,198,109,.28);border-radius:999px;font-size:12px;font-weight:700;margin-bottom:8px}.feature h3{margin:0 0 4px;font-size:25px;letter-spacing:-.04em}.feature p{margin:0;color:rgba(255,255,255,.82);font-size:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{padding:14px;border-radius:24px;min-height:120px}.mini .ico{font-size:24px}.mini h3{margin:10px 0 4px;font-size:17px}.mini p{margin:0;color:var(--muted);font-size:12px;line-height:1.35}.card{padding:18px;margin-bottom:12px}.card h3{margin:0 0 8px;font-size:21px}.line{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-top:1px solid rgba(255,255,255,.10);color:var(--muted);font-size:14px}.line:first-of-type{border-top:none}.line b{color:var(--text);text-align:right}.timeline{display:grid;gap:10px}.day{padding:16px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10)}.day b{display:block;font-size:17px;margin-bottom:4px}.day span{color:var(--muted);font-size:13px}.nav{position:fixed;z-index:10;left:14px;right:14px;bottom:12px;padding:8px 9px calc(8px + env(safe-area-inset-bottom));border-radius:30px;background:rgba(5,13,18,.72);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(24px);display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 20px 70px rgba(0,0,0,.55)}.nav button{border:0;background:transparent;color:rgba(255,255,255,.58);font:inherit;font-size:11px;display:grid;place-items:center;gap:3px;padding:7px 0;border-radius:22px}.nav button.active{background:rgba(255,255,255,.10);color:#fff}.nav i{font-style:normal;font-size:19px}.safe{height:10px}.private{font-size:12px;color:rgba(255,255,255,.56);line-height:1.4;margin-top:8px}.btn{border:0;border-radius:18px;background:linear-gradient(135deg,#f3d486,#b8842c);color:#170d03;padding:12px 15px;font-weight:800}.ghost{background:rgba(255,255,255,.09);color:#fff;border:1px solid rgba(255,255,255,.14)}@media(min-width:640px){.app{max-width:430px;margin:auto;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 40px 120px rgba(0,0,0,.7)}.sea{max-width:430px;left:50%;transform:translateX(-50%)}.nav{max-width:402px;margin:auto}}
   </style>
 </head>
 <body>
-  <main class="app">
+<div class="app">
+  <div class="sea"></div>
+  <main id="home" class="screen active">
+    <div class="top"><div class="pill">🌊 Costa Teguise</div><div class="avatar">M</div></div>
     <section class="hero">
-      <div class="top"><button class="round" aria-label="Menu"><span class="lines"><span></span><span></span><span></span></span></button><button class="round heart" aria-label="Favoris">♡</button></div>
-      <div class="brand">
-        <div class="mark">🌋</div>
-        <div class="kicker">Compagnon privé</div>
-        <div class="title">Lanzarote</div>
-        <div class="sub">Costa Teguise · Été 2026</div>
-        <div class="dates">📅 29 juillet → 13 août 2026</div>
-      </div>
-      <div class="count"><small>Plus que</small><div class="num" id="countdown">30</div><div class="days">jours</div><div class="chev">⌄</div></div>
-      <div class="stats"><div class="stat"><b>☀️ 27°</b><span>météo</span></div><div class="stat"><b>🌊 22°</b><span>mer</span></div><div class="stat"><b>🕘 -1h</b><span>Canaries</span></div></div>
-      <section class="quick">
-        <article class="card" style="--img:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop stop-color=%22%23e8a94d%22/><stop offset=%221%22 stop-color=%22%23061220%22/></linearGradient></defs><rect fill=%22url(%23g)%22 width=%22600%22 height=%22400%22/><path d=%22M0 270 C120 210 220 260 330 205 C430 155 520 165 600 120 L600 400 L0 400z%22 fill=%22%23020a13%22 opacity=%22.65%22/><path d=%22M190 140 l210 60 l-210 60 l35-70z%22 fill=%22white%22 opacity=%22.22%22/></svg>')"><div class="icon">✈</div><h2>Mon voyage</h2><p>Vols, hôtel, voiture</p><span class="arrow">›</span></article>
-        <article class="card" style="--img:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22><rect fill=%22%23091419%22 width=%22600%22 height=%22400%22/><path d=%22M0 300 C140 220 210 250 310 190 C430 120 500 120 600 80 L600 400 L0 400z%22 fill=%22%2300060a%22/><path d=%22M260 98 l58 138 h-116z%22 fill=%22%23a2602f%22/><path d=%22M0 260 C180 190 380 250 600 170 L600 400 L0 400z%22 fill=%22%23008aa8%22 opacity=%22.45%22/></svg>')"><div class="icon">☀</div><h2>Aujourd’hui</h2><p>Météo & idées du jour</p><span class="arrow">›</span></article>
-        <article class="card" style="--img:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22><rect fill=%22%23070a0b%22 width=%22600%22 height=%22400%22/><path d=%22M0 350 L210 90 L360 350z%22 fill=%22%23322018%22/><path d=%22M170 350 L390 60 L600 350z%22 fill=%22%23704a2c%22/><path d=%22M0 285 C130 240 250 290 380 230 C480 190 540 190 600 180 L600 400 L0 400z%22 fill=%22%23006e87%22 opacity=%22.5%22/></svg>')"><div class="icon">🗺</div><h2>Explorer</h2><p>Volcans & pépites</p><span class="arrow">›</span></article>
-        <article class="card" style="--img:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22><rect fill=%22%23060b10%22 width=%22600%22 height=%22400%22/><circle cx=%22480%22 cy=%2270%22 r=%2270%22 fill=%22%23f6c36b%22 opacity=%22.8%22/><path d=%22M0 260 C130 210 220 255 330 205 C440 155 530 160 600 118 L600 400 L0 400z%22 fill=%22%23007f9e%22 opacity=%22.7%22/><path d=%22M0 330 C150 290 300 320 600 275 L600 400 L0 400z%22 fill=%22%23140805%22/></svg>')"><div class="icon">🍽</div><h2>Restaurants</h2><p>Nos bonnes adresses</p><span class="arrow">›</span></article>
-        <article class="card" style="--img:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22><rect fill=%22%23060705%22 width=%22600%22 height=%22400%22/><path d=%22M0 330 C120 250 220 270 320 205 C440 130 515 140 600 100 L600 400 L0 400z%22 fill=%22%23110b07%22/><g fill=%22%232f6d26%22 opacity=%22.75%22><rect x=%2280%22 y=%22235%22 width=%2280%22 height=%2212%22 rx=%226%22/><rect x=%22210%22 y=%22215%22 width=%22100%22 height=%2212%22 rx=%226%22/><rect x=%22355%22 y=%22250%22 width=%2290%22 height=%2212%22 rx=%226%22/></g></svg>')"><div class="icon">🍷</div><h2>Bodegas</h2><p>La Geria & dégustations</p><span class="arrow">›</span></article>
-        <article class="card" style="--img:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22><rect fill=%22%230b0b0d%22 width=%22600%22 height=%22400%22/><circle cx=%22470%22 cy=%2280%22 r=%2275%22 fill=%22%23f6c36b%22 opacity=%22.65%22/><path d=%22M0 295 C150 225 320 310 600 200 L600 400 L0 400z%22 fill=%22%2300718f%22 opacity=%22.62%22/><path d=%22M0 345 C170 300 360 350 600 295 L600 400 L0 400z%22 fill=%22%23110704%22/></svg>')"><div class="icon">📷</div><h2>Journal</h2><p>Souvenirs jour après jour</p><span class="arrow">›</span></article>
-        <article class="card wide" style="--img:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 900 300%22><rect fill=%22%2306080b%22 width=%22900%22 height=%22300%22/><path d=%22M0 230 C170 130 275 185 430 120 C610 45 735 110 900 50 L900 300 L0 300z%22 fill=%22%23008baa%22 opacity=%22.65%22/><path d=%22M0 275 C245 210 535 280 900 205 L900 300 L0 300z%22 fill=%22%230b0502%22/></svg>')"><div class="icon">⭐</div><h2>Pépites</h2><p>Les endroits à ne pas rater, loin des pièges à touristes</p><span class="arrow">›</span></article>
-      </section>
-      <section class="today"><h3>👋 Bonjour Mylène</h3><p>Votre compagnon privé est prêt pour Mylène, Pascal, Frédéric et Maïté. Prochaine étape : remplir Explorer, Restaurants et Bodegas.</p></section>
+      <div class="kicker">Votre voyage privé</div>
+      <h1 class="title">Lanzarote</h1>
+      <div class="subtitle">Mylène • Pascal • Frédéric • Maïté<br>29 juillet → 13 août 2026</div>
+      <div class="count glass"><div><span>Avant le départ</span><strong id="days">—</strong></div><button class="btn">Commencer</button></div>
     </section>
-    <nav class="nav" aria-label="Navigation"><a class="active" href="#"><i>⌂</i>Accueil</a><a href="#"><i>♡</i>Favoris</a><a href="#"><span class="homeCircle"><i>⌖</i></span></a><a href="#"><i>ⓘ</i>Infos</a><a href="#"><i>•••</i>Plus</a></nav>
+    <div class="weather">
+      <div><b>28°</b><small>Air</small></div><div><b>22°</b><small>Mer</small></div><div><b>18</b><small>Vent</small></div><div><b>9</b><small>UV</small></div>
+    </div>
+    <div class="section-title"><h2>Aujourd'hui</h2><a href="#program" data-go="program">Programme</a></div>
+    <article class="feature" data-go="explore"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=85"><div class="txt"><span class="tag">Suggestion</span><h3>Papagayo</h3><p>Matinée plage, eau turquoise, arrivée tôt conseillée.</p></div></article>
+    <div class="grid">
+      <div class="mini glass"><div class="ico">🍽</div><h3>Resto</h3><p>Déjeuners simples dehors + quelques plaisirs.</p></div>
+      <div class="mini glass"><div class="ico">🍷</div><h3>Bodega</h3><p>La Geria, vins volcaniques et dégustation.</p></div>
+    </div>
   </main>
-  <script>
-    const start = new Date('2026-07-29T00:00:00');
-    const now = new Date();
-    const days = Math.max(0, Math.ceil((start-now)/(1000*60*60*24)));
-    const el = document.getElementById('countdown');
-    if (el && days !== 30) el.textContent = days;
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
-  </script>
+  <main id="trip" class="screen">
+    <div class="top"><div class="pill">✈️ Mon voyage</div><div class="avatar">4</div></div>
+    <div class="section-title"><h2>Infos essentielles</h2></div>
+    <div class="card glass"><h3>🏨 Barceló Teguise Beach</h3><div class="line"><span>Lieu</span><b>Costa Teguise</b></div><div class="line"><span>Formule</span><b>Demi-pension</b></div><div class="line"><span>Chambres</span><b>2 deluxe jacuzzi</b></div><div class="line"><span>Transferts</span><b>A/R inclus</b></div></div>
+    <div class="card glass"><h3>👥 Voyageurs</h3><div class="line"><span>Mylène</span><b>✓</b></div><div class="line"><span>Pascal</span><b>✓</b></div><div class="line"><span>Frédéric</span><b>✓</b></div><div class="line"><span>Maïté</span><b>✓</b></div></div>
+    <div class="card glass"><h3>🔒 Documents privés</h3><p class="private">Les numéros de dossier, billets, QR codes et documents sensibles ne seront pas affichés dans la version publique. Zone privée à prévoir.</p></div>
+  </main>
+  <main id="program" class="screen">
+    <div class="top"><div class="pill">📅 Programme</div><div class="avatar">15</div></div>
+    <div class="section-title"><h2>Fil conducteur</h2></div>
+    <div class="timeline">
+      <div class="day glass"><b>J1 — Arrivée</b><span>Installation + repérage Costa Teguise + dîner hôtel</span></div>
+      <div class="day glass"><b>J2 — Plage</b><span>Las Cucharas / Jablillo + apéro balcon</span></div>
+      <div class="day glass"><b>J3 — Nord</b><span>Mirador del Río + village d’Haría</span></div>
+      <div class="day glass"><b>J4 — Volcans</b><span>Timanfaya + route des volcans</span></div>
+      <div class="day glass"><b>J5 — Vins</b><span>La Geria + dégustation + coucher de soleil</span></div>
+    </div>
+  </main>
+  <main id="explore" class="screen">
+    <div class="top"><div class="pill">🧭 Explorer</div><div class="avatar">🌊</div></div>
+    <div class="section-title"><h2>À découvrir</h2></div>
+    <article class="feature"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1100&q=85"><div class="txt"><span class="tag">Plage</span><h3>Las Cucharas</h3><p>Proche hôtel, parfait pour une journée douce.</p></div></article>
+    <article class="feature"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1100&q=85"><div class="txt"><span class="tag">Volcan</span><h3>Timanfaya</h3><p>À faire tôt le matin pour éviter chaleur et foule.</p></div></article>
+    <article class="feature"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1100&q=85"><div class="txt"><span class="tag">Vin</span><h3>La Geria</h3><p>Dégustation, paysages volcaniques et coucher de soleil.</p></div></article>
+  </main>
+  <nav class="nav">
+    <button class="active" data-go="home"><i>⌂</i>Accueil</button><button data-go="explore"><i>◇</i>Explorer</button><button data-go="program"><i>▣</i>Prog.</button><button data-go="trip"><i>◉</i>Voyage</button>
+  </nav>
+</div>
+<script>
+const start=new Date('2026-07-29T00:00:00');const today=new Date();const diff=Math.ceil((start-today)/(1000*60*60*24));document.getElementById('days').textContent=diff>0?'J-'+diff:'En voyage';
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===id));scrollTo(0,0)}
+document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();show(el.dataset.go)}));
+</script>
 </body>
 </html>
