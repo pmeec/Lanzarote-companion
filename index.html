@@ -1,69 +1,164 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Lanzarote 2026</title>
-  <meta name="theme-color" content="#07161d" />
-  <link rel="manifest" href="manifest.json" />
-  <style>
-    :root{--bg:#061116;--card:rgba(8,20,27,.62);--card2:rgba(255,255,255,.10);--text:#fff9ee;--muted:rgba(255,249,238,.72);--gold:#f0c66d;--cyan:#57d8df;--line:rgba(255,255,255,.14);--shadow:0 24px 80px rgba(0,0,0,.55);--radius:28px}*{box-sizing:border-box}html,body{margin:0;background:#061116;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif}body{min-height:100svh;overflow-x:hidden}.app{min-height:100svh;background:radial-gradient(circle at 50% -10%,rgba(68,208,219,.28),transparent 30%),linear-gradient(180deg,#07202c 0,#050b0f 55%,#030609 100%);position:relative}.sea{position:fixed;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(2,7,10,.78) 60%,#030609),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85') center/cover no-repeat;opacity:.92;z-index:0}.app:before{content:"";position:fixed;inset:0;background:linear-gradient(110deg,rgba(255,255,255,.12),transparent 22%,transparent 70%,rgba(240,198,109,.12));mix-blend-mode:screen;z-index:1;pointer-events:none}.screen{position:relative;z-index:2;min-height:100svh;padding:18px 18px 94px;display:none;animation:fade .32s ease}.screen.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:max(6px,env(safe-area-inset-top))}.pill{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid var(--line);background:rgba(5,15,20,.42);backdrop-filter:blur(18px);border-radius:999px;color:var(--muted);font-size:13px}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#f3d486,#8f6424);color:#201103;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.35)}.hero{padding-top:34px;min-height:43svh;display:flex;flex-direction:column;justify-content:flex-end}.kicker{text-transform:uppercase;letter-spacing:.22em;color:var(--gold);font-size:12px;font-weight:700}.title{font-size:54px;line-height:.9;margin:8px 0 8px;font-weight:800;letter-spacing:-.06em;text-shadow:0 18px 60px rgba(0,0,0,.7)}.subtitle{font-size:16px;color:var(--muted);line-height:1.45;max-width:310px}.glass{background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.06));border:1px solid var(--line);backdrop-filter:blur(22px);box-shadow:var(--shadow);border-radius:var(--radius)}.count{margin-top:22px;padding:18px;display:grid;grid-template-columns:1fr auto;align-items:center}.count strong{font-size:42px;letter-spacing:-.05em;color:#fff}.count span{color:var(--muted);font-size:13px}.weather{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:13px 0 20px}.weather div{padding:12px 8px;text-align:center;border-radius:20px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.10)}.weather b{display:block;font-size:18px}.weather small{color:var(--muted);font-size:11px}.section-title{display:flex;justify-content:space-between;align-items:flex-end;margin:24px 0 12px}.section-title h2{margin:0;font-size:24px;letter-spacing:-.04em}.section-title a{color:var(--gold);font-size:13px;text-decoration:none}.feature{min-height:194px;border-radius:32px;overflow:hidden;position:relative;background:#123;margin-bottom:14px;box-shadow:0 20px 70px rgba(0,0,0,.45)}.feature:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0,rgba(0,0,0,.25) 35%,rgba(0,0,0,.82) 100%);z-index:1}.feature img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.feature .txt{position:absolute;z-index:2;left:18px;right:18px;bottom:16px}.tag{display:inline-flex;padding:6px 10px;background:rgba(240,198,109,.18);color:var(--gold);border:1px solid rgba(240,198,109,.28);border-radius:999px;font-size:12px;font-weight:700;margin-bottom:8px}.feature h3{margin:0 0 4px;font-size:25px;letter-spacing:-.04em}.feature p{margin:0;color:rgba(255,255,255,.82);font-size:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{padding:14px;border-radius:24px;min-height:120px}.mini .ico{font-size:24px}.mini h3{margin:10px 0 4px;font-size:17px}.mini p{margin:0;color:var(--muted);font-size:12px;line-height:1.35}.card{padding:18px;margin-bottom:12px}.card h3{margin:0 0 8px;font-size:21px}.line{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-top:1px solid rgba(255,255,255,.10);color:var(--muted);font-size:14px}.line:first-of-type{border-top:none}.line b{color:var(--text);text-align:right}.timeline{display:grid;gap:10px}.day{padding:16px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10)}.day b{display:block;font-size:17px;margin-bottom:4px}.day span{color:var(--muted);font-size:13px}.nav{position:fixed;z-index:10;left:14px;right:14px;bottom:12px;padding:8px 9px calc(8px + env(safe-area-inset-bottom));border-radius:30px;background:rgba(5,13,18,.72);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(24px);display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 20px 70px rgba(0,0,0,.55)}.nav button{border:0;background:transparent;color:rgba(255,255,255,.58);font:inherit;font-size:11px;display:grid;place-items:center;gap:3px;padding:7px 0;border-radius:22px}.nav button.active{background:rgba(255,255,255,.10);color:#fff}.nav i{font-style:normal;font-size:19px}.safe{height:10px}.private{font-size:12px;color:rgba(255,255,255,.56);line-height:1.4;margin-top:8px}.btn{border:0;border-radius:18px;background:linear-gradient(135deg,#f3d486,#b8842c);color:#170d03;padding:12px 15px;font-weight:800}.ghost{background:rgba(255,255,255,.09);color:#fff;border:1px solid rgba(255,255,255,.14)}@media(min-width:640px){.app{max-width:430px;margin:auto;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 40px 120px rgba(0,0,0,.7)}.sea{max-width:430px;left:50%;transform:translateX(-50%)}.nav{max-width:402px;margin:auto}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lanzarote Companion</title>
+<style>
+:root{
+  --gold:#d8aa4c;--gold2:#ffd27a;--dark:#050607;--card:rgba(10,12,14,.72);
+  --line:rgba(255,255,255,.16);--txt:#fff;--soft:#d8dde4
+}
+*{box-sizing:border-box}
+body{margin:0;background:#050607;color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.app{max-width:430px;margin:auto;min-height:100vh;padding-bottom:92px;background:#070809}
+.hero{
+  min-height:560px;padding:32px 22px 20px;position:relative;overflow:hidden;
+  background:
+  linear-gradient(to bottom,rgba(0,0,0,.15),rgba(0,0,0,.15) 35%,#070809 92%),
+  url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80") center/cover;
+}
+.top{display:flex;justify-content:space-between;align-items:center}
+.round{width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,.42);display:grid;place-items:center;border:1px solid var(--line);backdrop-filter:blur(12px)}
+.logo{text-align:center;margin-top:70px}
+.logo h1{font-family:Georgia,serif;font-size:52px;letter-spacing:3px;margin:0;color:#fff;text-shadow:0 3px 18px #000}
+.logo p{color:var(--gold2);letter-spacing:2px;margin:8px 0 0;font-size:15px}
+.pills{display:flex;flex-direction:column;gap:10px;align-items:center;margin-top:26px}
+.pill{background:rgba(0,0,0,.42);border:1px solid var(--line);border-radius:999px;padding:10px 16px;backdrop-filter:blur(14px)}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:84px}
+.stat{background:rgba(0,0,0,.62);border:1px solid var(--line);border-radius:20px;padding:14px;text-align:center;backdrop-filter:blur(15px)}
+.stat strong{font-size:25px;color:#fff}.stat small{display:block;color:#ddd;margin-top:3px}
+main{padding:0 18px 18px;margin-top:-30px;position:relative}
+.hello{font-family:Georgia,serif;color:var(--gold2);font-size:27px;margin:0 0 8px}
+.sub{color:#e9edf2;margin:0 0 16px}
+.bigcard,.mini,.travel-card{
+  background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;
+  box-shadow:0 18px 40px rgba(0,0,0,.35);backdrop-filter:blur(16px)
+}
+.bigcard{min-height:190px;background:
+linear-gradient(to right,rgba(0,0,0,.65),rgba(0,0,0,.12)),
+url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80") center/cover;
+padding:22px;margin-bottom:14px}
+.label{color:var(--gold2);font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+.bigcard h2{font-family:Georgia,serif;font-size:34px;margin:10px 0 6px}
+.bigcard p{max-width:210px;color:#f0f0f0;line-height:1.35}
+.btn{display:inline-block;margin-top:10px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1204;padding:10px 18px;border-radius:999px;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini{min-height:130px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;background-size:cover;background-position:center}
+.mini h3{margin:6px 0 2px;font-size:18px}.mini p{margin:0;color:#ddd;font-size:13px}
+.voyage{background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.8)),url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=700&q=80")}
+.restos{background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.82)),url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=700&q=80")}
+.bodega{background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.82)),url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=700&q=80")}
+.programme{background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.82)),url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80")}
+.section{margin-top:18px}
+.travel-card{padding:16px;margin-top:10px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.row:last-child{border-bottom:0}.row span{color:var(--gold2)}.row b{text-align:right}
+.nav{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);width:min(430px,96vw);height:74px;background:rgba(8,9,10,.88);border:1px solid var(--line);border-radius:30px;display:grid;grid-template-columns:repeat(5,1fr);backdrop-filter:blur(20px);z-index:5}
+.nav button{background:none;border:0;color:#aaa;font-size:11px;font-weight:700}
+.nav button.active{color:var(--gold2)}
+.nav i{display:block;font-style:normal;font-size:24px;margin-bottom:3px}
+.page{display:none}.page.active{display:block}
+h2.title{font-family:Georgia,serif;font-size:30px;margin:12px 0}
+</style>
 </head>
 <body>
 <div class="app">
-  <div class="sea"></div>
-  <main id="home" class="screen active">
-    <div class="top"><div class="pill">🌊 Costa Teguise</div><div class="avatar">M</div></div>
-    <section class="hero">
-      <div class="kicker">Votre voyage privé</div>
-      <h1 class="title">Lanzarote</h1>
-      <div class="subtitle">Mylène • Pascal • Frédéric • Maïté<br>29 juillet → 13 août 2026</div>
-      <div class="count glass"><div><span>Avant le départ</span><strong id="days">—</strong></div><button class="btn">Commencer</button></div>
-    </section>
-    <div class="weather">
-      <div><b>28°</b><small>Air</small></div><div><b>22°</b><small>Mer</small></div><div><b>18</b><small>Vent</small></div><div><b>9</b><small>UV</small></div>
+<section class="hero">
+  <div class="top"><div class="round">☰</div><div class="round">🔔</div></div>
+  <div class="logo">
+    <h1>LANZAROTE</h1>
+    <p>Votre compagnon de voyage</p>
+  </div>
+  <div class="pills">
+    <div class="pill">📅 29 juillet → 13 août 2026</div>
+    <div class="pill">📍 Costa Teguise</div>
+  </div>
+  <div class="stats">
+    <div class="stat"><strong>☀️ 28°</strong><small>ensoleillé</small></div>
+    <div class="stat"><strong>🌊 22°</strong><small>mer calme</small></div>
+    <div class="stat"><strong>J-30</strong><small>avant départ</small></div>
+  </div>
+</section>
+
+<main>
+  <section id="home" class="page active">
+    <h2 class="hello">Bonjour Mylène 👋</h2>
+    <p class="sub">Voici vos suggestions pour aujourd’hui.</p>
+
+    <div class="bigcard">
+      <div class="label">Suggestion du jour</div>
+      <h2>Plage de Papagayo</h2>
+      <p>Eaux turquoise, criques sauvages et sable doré.</p>
+      <span class="btn">Découvrir →</span>
     </div>
-    <div class="section-title"><h2>Aujourd'hui</h2><a href="#program" data-go="program">Programme</a></div>
-    <article class="feature" data-go="explore"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=85"><div class="txt"><span class="tag">Suggestion</span><h3>Papagayo</h3><p>Matinée plage, eau turquoise, arrivée tôt conseillée.</p></div></article>
+
     <div class="grid">
-      <div class="mini glass"><div class="ico">🍽</div><h3>Resto</h3><p>Déjeuners simples dehors + quelques plaisirs.</p></div>
-      <div class="mini glass"><div class="ico">🍷</div><h3>Bodega</h3><p>La Geria, vins volcaniques et dégustation.</p></div>
+      <div class="mini restos"><div class="label">Restaurant</div><h3>El Navarro</h3><p>Vue mer & cuisine locale</p></div>
+      <div class="mini bodega"><div class="label">Bodega</div><h3>El Grifo</h3><p>Dégustation à La Geria</p></div>
+      <div class="mini programme"><div class="label">Aujourd’hui</div><h3>Mirador del Río</h3><p>Matinée • 1h10</p></div>
+      <div class="mini voyage"><div class="label">Voyage</div><h3>Vos infos</h3><p>Hôtel, voiture, docs</p></div>
     </div>
-  </main>
-  <main id="trip" class="screen">
-    <div class="top"><div class="pill">✈️ Mon voyage</div><div class="avatar">4</div></div>
-    <div class="section-title"><h2>Infos essentielles</h2></div>
-    <div class="card glass"><h3>🏨 Barceló Teguise Beach</h3><div class="line"><span>Lieu</span><b>Costa Teguise</b></div><div class="line"><span>Formule</span><b>Demi-pension</b></div><div class="line"><span>Chambres</span><b>2 deluxe jacuzzi</b></div><div class="line"><span>Transferts</span><b>A/R inclus</b></div></div>
-    <div class="card glass"><h3>👥 Voyageurs</h3><div class="line"><span>Mylène</span><b>✓</b></div><div class="line"><span>Pascal</span><b>✓</b></div><div class="line"><span>Frédéric</span><b>✓</b></div><div class="line"><span>Maïté</span><b>✓</b></div></div>
-    <div class="card glass"><h3>🔒 Documents privés</h3><p class="private">Les numéros de dossier, billets, QR codes et documents sensibles ne seront pas affichés dans la version publique. Zone privée à prévoir.</p></div>
-  </main>
-  <main id="program" class="screen">
-    <div class="top"><div class="pill">📅 Programme</div><div class="avatar">15</div></div>
-    <div class="section-title"><h2>Fil conducteur</h2></div>
-    <div class="timeline">
-      <div class="day glass"><b>J1 — Arrivée</b><span>Installation + repérage Costa Teguise + dîner hôtel</span></div>
-      <div class="day glass"><b>J2 — Plage</b><span>Las Cucharas / Jablillo + apéro balcon</span></div>
-      <div class="day glass"><b>J3 — Nord</b><span>Mirador del Río + village d’Haría</span></div>
-      <div class="day glass"><b>J4 — Volcans</b><span>Timanfaya + route des volcans</span></div>
-      <div class="day glass"><b>J5 — Vins</b><span>La Geria + dégustation + coucher de soleil</span></div>
+  </section>
+
+  <section id="voyage" class="page">
+    <h2 class="title">Mon voyage</h2>
+    <div class="travel-card">
+      <div class="row"><span>🏨 Hôtel</span><b>Barceló Teguise Beach 4★</b></div>
+      <div class="row"><span>📍 Lieu</span><b>Costa Teguise</b></div>
+      <div class="row"><span>🍽 Formule</span><b>Demi-pension</b></div>
+      <div class="row"><span>🚗 Voiture</span><b>Location incluse</b></div>
+      <div class="row"><span>👥 Participants</span><b>Mylène • Pascal • Frédéric • Maïté</b></div>
+      <div class="row"><span>🆘 Urgence</span><b>112</b></div>
     </div>
-  </main>
-  <main id="explore" class="screen">
-    <div class="top"><div class="pill">🧭 Explorer</div><div class="avatar">🌊</div></div>
-    <div class="section-title"><h2>À découvrir</h2></div>
-    <article class="feature"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1100&q=85"><div class="txt"><span class="tag">Plage</span><h3>Las Cucharas</h3><p>Proche hôtel, parfait pour une journée douce.</p></div></article>
-    <article class="feature"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1100&q=85"><div class="txt"><span class="tag">Volcan</span><h3>Timanfaya</h3><p>À faire tôt le matin pour éviter chaleur et foule.</p></div></article>
-    <article class="feature"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1100&q=85"><div class="txt"><span class="tag">Vin</span><h3>La Geria</h3><p>Dégustation, paysages volcaniques et coucher de soleil.</p></div></article>
-  </main>
-  <nav class="nav">
-    <button class="active" data-go="home"><i>⌂</i>Accueil</button><button data-go="explore"><i>◇</i>Explorer</button><button data-go="program"><i>▣</i>Prog.</button><button data-go="trip"><i>◉</i>Voyage</button>
-  </nav>
+  </section>
+
+  <section id="explorer" class="page">
+    <h2 class="title">Explorer</h2>
+    <div class="grid">
+      <div class="mini programme"><h3>Mirador del Río</h3><p>Panorama exceptionnel</p></div>
+      <div class="mini bodega"><h3>La Geria</h3><p>Vins volcaniques</p></div>
+      <div class="mini restos"><h3>Teguise</h3><p>Marché du dimanche</p></div>
+      <div class="mini voyage"><h3>Timanfaya</h3><p>Volcans & paysages</p></div>
+    </div>
+  </section>
+
+  <section id="restos" class="page">
+    <h2 class="title">Restaurants</h2>
+    <div class="travel-card">
+      <div class="row"><span>🍽 El Navarro</span><b>Cuisine locale</b></div>
+      <div class="row"><span>🐟 Poisson grillé</span><b>15–25 €/pers.</b></div>
+      <div class="row"><span>🍦 Glaces / café</span><b>3–6 €</b></div>
+    </div>
+  </section>
+
+  <section id="infos" class="page">
+    <h2 class="title">Infos</h2>
+    <div class="travel-card">
+      <div class="row"><span>⏰ Décalage</span><b>-1h</b></div>
+      <div class="row"><span>💶 Devise</span><b>Euro</b></div>
+      <div class="row"><span>🧴 À prévoir</span><b>SPF 50 • gourde • powerbank</b></div>
+    </div>
+  </section>
+</main>
+
+<nav class="nav">
+  <button class="active" onclick="show('home',this)"><i>🏠</i>Accueil</button>
+  <button onclick="show('explorer',this)"><i>🧭</i>Explorer</button>
+  <button onclick="show('restos',this)"><i>🍴</i>Restos</button>
+  <button onclick="show('voyage',this)"><i>👤</i>Voyage</button>
+  <button onclick="show('infos',this)"><i>•••</i>Infos</button>
+</nav>
 </div>
+
 <script>
-const start=new Date('2026-07-29T00:00:00');const today=new Date();const diff=Math.ceil((start-today)/(1000*60*60*24));document.getElementById('days').textContent=diff>0?'J-'+diff:'En voyage';
-function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===id));scrollTo(0,0)}
-document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();show(el.dataset.go)}));
+function show(id,btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  scrollTo({top:0,behavior:'smooth'});
+}
 </script>
 </body>
 </html>
