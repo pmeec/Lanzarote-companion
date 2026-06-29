@@ -1,50 +1,69 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#050505" />
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icon-192.png">
-<title>Lanzarote Companion</title>
-<style>
-:root{--gold:#f3c46a;--gold2:#ff9f43;--bg:#050505;--glass:rgba(255,255,255,.12);--line:rgba(255,255,255,.22);--text:#fff;--muted:rgba(255,255,255,.75)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#030303;color:var(--text)}
-.hero{min-height:100vh;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.78) 55%,#050505 92%),url('sea-lanzarote.svg') center/cover fixed;display:flex;flex-direction:column;padding:env(safe-area-inset-top) 18px 90px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 20% 20%,rgba(255,196,106,.22),transparent 26%),radial-gradient(circle at 85% 12%,rgba(48,185,255,.22),transparent 24%);animation:float 10s ease-in-out infinite alternate;pointer-events:none}@keyframes float{to{transform:translate3d(2%,3%,0) scale(1.04)}}
-.top{position:relative;z-index:1;padding-top:34px}.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(0,0,0,.28);backdrop-filter:blur(18px);font-size:13px;color:var(--muted)}
-h1{font-size:48px;line-height:.9;margin:24px 0 6px;letter-spacing:-2px;text-transform:uppercase}.sub{font-size:16px;color:var(--muted);margin:0 0 18px}.count{display:flex;gap:10px;align-items:center;margin:18px 0 16px}.count .num{font-size:38px;font-weight:800;color:var(--gold)}.count .txt{line-height:1.15;color:var(--muted)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.stat{padding:12px 10px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.1);backdrop-filter:blur(20px);text-align:center}.stat b{display:block;font-size:19px}.stat span{font-size:11px;color:var(--muted)}
-.grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:auto}.card{min-height:106px;padding:16px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,rgba(255,255,255,.17),rgba(255,255,255,.07));backdrop-filter:blur(22px);box-shadow:0 20px 60px rgba(0,0,0,.22);text-decoration:none;color:#fff;display:flex;flex-direction:column;justify-content:space-between}.card .ico{font-size:28px}.card b{font-size:17px}.card span{font-size:12px;color:var(--muted)}
-section{padding:26px 18px 90px;background:#050505}h2{font-size:29px;margin:0 0 14px}.panel{border:1px solid rgba(255,255,255,.14);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.04));padding:18px;margin:12px 0;box-shadow:0 20px 70px rgba(0,0,0,.25)}.panel h3{margin:0 0 12px;font-size:21px}.row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1)}.row:last-child{border-bottom:0}.row span{color:var(--muted)}.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.btn{padding:13px;border-radius:18px;text-align:center;text-decoration:none;color:#111;background:linear-gradient(135deg,var(--gold),#fff0ba);font-weight:700}.btn.secondary{background:rgba(255,255,255,.1);color:#fff;border:1px solid var(--line)}
-.list{display:grid;gap:12px}.place{padding:15px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}.place-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.pill{font-size:12px;padding:6px 9px;border-radius:999px;background:rgba(243,196,106,.16);color:#ffe1a0;border:1px solid rgba(243,196,106,.25)}.place p{margin:7px 0 0;color:var(--muted);font-size:14px;line-height:1.35}.maps{display:inline-block;margin-top:10px;color:var(--gold);text-decoration:none;font-weight:700}
-.nav{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px;border:1px solid rgba(255,255,255,.2);border-radius:28px;background:rgba(10,10,10,.78);backdrop-filter:blur(22px);box-shadow:0 20px 70px rgba(0,0,0,.45)}.nav a{color:#fff;text-decoration:none;text-align:center;font-size:11px;padding:8px 2px;border-radius:20px}.nav a span{display:block;font-size:20px}.nav a.active{background:rgba(255,255,255,.12)}
-.small{font-size:13px;color:var(--muted);line-height:1.4}.check{display:grid;gap:8px}.check label{display:flex;gap:10px;align-items:center;padding:12px;border-radius:18px;background:rgba(255,255,255,.07)}input[type=checkbox]{width:20px;height:20px;accent-color:#f3c46a}.footer-note{color:var(--muted);font-size:12px;text-align:center;margin-top:20px}
-@media(min-width:700px){body{max-width:430px;margin:auto;background:#111}.hero,section{max-width:430px;margin:auto}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050505" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Lanzarote" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <title>Lanzarote 2026</title>
+  <style>
+    :root{
+      --bg:#040404; --text:#fff8ee; --muted:rgba(255,248,238,.74); --gold:#f5c46b;
+      --glass:rgba(18,18,18,.48); --line:rgba(255,255,255,.18); --shadow:0 24px 80px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;}
+    .app{min-height:100vh;position:relative;overflow-x:hidden;padding-bottom:94px;background:#050505;}
+    .hero{min-height:100vh;position:relative;padding:env(safe-area-inset-top) 18px 108px;display:flex;flex-direction:column;justify-content:space-between;isolation:isolate;}
+    .hero:before{content:"";position:absolute;inset:0;background:
+      linear-gradient(180deg,rgba(0,0,0,.36),rgba(0,0,0,.18) 42%,rgba(0,0,0,.86) 100%),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat;z-index:-2;transform:scale(1.02);}
+    .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 74% 18%,rgba(245,196,107,.24),transparent 34%),linear-gradient(90deg,rgba(0,0,0,.72),transparent 48%);z-index:-1;}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding-top:14px}.pill{border:1px solid var(--line);background:rgba(0,0,0,.28);backdrop-filter:blur(18px);padding:9px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .brand{margin-top:64px}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700}.title{font-family:Georgia,serif;font-size:56px;line-height:.92;margin:12px 0 8px;text-shadow:0 10px 32px rgba(0,0,0,.45)}.subtitle{font-size:17px;color:var(--muted);margin:0}.count{margin-top:24px;display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(245,196,107,.34);background:rgba(245,196,107,.12);backdrop-filter:blur(20px);border-radius:24px;padding:12px 15px;box-shadow:var(--shadow)}.count b{font-size:24px;color:#fff}.count span{font-size:13px;color:var(--muted)}
+    .quick{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{min-height:112px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.05));backdrop-filter:blur(22px);border-radius:28px;padding:17px;box-shadow:0 18px 60px rgba(0,0,0,.22);text-decoration:none;color:var(--text);display:flex;flex-direction:column;justify-content:space-between;transition:transform .2s ease,border-color .2s ease}.card:active{transform:scale(.97)}.icon{font-size:28px}.card h3{margin:0;font-size:17px}.card p{margin:4px 0 0;color:var(--muted);font-size:12px;line-height:1.25}.wide{grid-column:1/-1;min-height:96px;background:linear-gradient(135deg,rgba(245,196,107,.22),rgba(255,255,255,.08))}
+    section{padding:24px 18px 10px}.section-title{display:flex;align-items:end;justify-content:space-between;margin:12px 0 14px}.section-title h2{font-size:28px;margin:0;font-family:Georgia,serif}.section-title span{color:var(--gold);font-size:13px}.panel{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:28px;padding:18px;margin-bottom:14px}.row{display:flex;gap:12px;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.1);padding-top:12px;margin-top:12px}.row:first-child{border-top:0;padding-top:0;margin-top:0}.label{color:var(--muted);font-size:13px}.value{font-weight:700;text-align:right}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(245,196,107,.45);background:rgba(245,196,107,.15);color:var(--text);border-radius:999px;padding:12px 15px;text-decoration:none;font-weight:700;font-size:14px}
+    .gallery{display:flex;gap:14px;overflow:auto;padding-bottom:8px;scroll-snap-type:x mandatory}.place{min-width:258px;height:330px;border-radius:32px;overflow:hidden;position:relative;scroll-snap-align:start;border:1px solid var(--line);background:#111}.place:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.86));z-index:1}.place img{width:100%;height:100%;object-fit:cover;display:block}.place div{position:absolute;left:18px;right:18px;bottom:18px;z-index:2}.place h3{font-size:26px;font-family:Georgia,serif;margin:0}.place p{margin:6px 0 0;color:var(--muted);font-size:13px}.tag{position:absolute;top:14px;left:14px;z-index:2;background:rgba(0,0,0,.46);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:12px;color:var(--gold);backdrop-filter:blur(14px)}
+    .tabs{position:fixed;z-index:20;left:12px;right:12px;bottom:12px;padding:9px;background:rgba(8,8,8,.72);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(22px);border-radius:28px;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 16px 60px rgba(0,0,0,.5)}.tabs a{text-decoration:none;color:rgba(255,255,255,.62);font-size:11px;text-align:center;padding:8px 2px;border-radius:20px}.tabs b{display:block;font-size:20px;margin-bottom:3px}.tabs a.active{color:#fff;background:rgba(255,255,255,.1)}
+    .note{color:var(--muted);font-size:13px;line-height:1.45}.small-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:24px;padding:15px}.mini strong{display:block;font-size:19px}.mini span{display:block;color:var(--muted);font-size:12px;margin-top:4px}@media(min-width:740px){.app{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px #222}.hero{min-height:880px}}
+  </style>
 </head>
 <body>
-<header class="hero" id="home">
- <div class="top">
-  <div class="badge">🌊 Costa Teguise • 29 juillet → 13 août 2026</div>
-  <h1>Lanzarote</h1>
-  <p class="sub">Compagnon de voyage de Mylène • Pascal • Frédéric • Maïté</p>
-  <div class="count"><div class="num" id="days">--</div><div class="txt">jours<br>avant le départ</div></div>
-  <div class="stats"><div class="stat"><b>☀️ 27°</b><span>météo type</span></div><div class="stat"><b>🌊 22°</b><span>mer</span></div><div class="stat"><b>🕘 -1h</b><span>Canaries</span></div></div>
- </div>
- <div class="grid">
-  <a class="card" href="#voyage"><div class="ico">✈️</div><b>Mon voyage</b><span>vols, hôtel, parking</span></a>
-  <a class="card" href="#explorer"><div class="ico">🌋</div><b>Explorer</b><span>volcans & pépites</span></a>
-  <a class="card" href="#plages"><div class="ico">🏖️</div><b>Plages</b><span>mer, snorkeling</span></a>
-  <a class="card" href="#pratique"><div class="ico">🧳</div><b>Pratique</b><span>valise & courses</span></a>
- </div>
-</header>
-<section id="voyage"><h2>✈️ Mon voyage</h2><div class="panel"><h3>Vols EasyJet</h3><div class="row"><span>Aller</span><b>U24577 • CDG 15h15 → ACE 18h25</b></div><div class="row"><span>Retour</span><b>U24580 • ACE 19h15 → CDG 00h10</b></div><div class="row"><span>PNR</span><b>KBZZQ2Q</b></div></div><div class="panel"><h3>Hôtel & formule</h3><div class="row"><span>Hôtel</span><b>Barceló Teguise Beach 4★</b></div><div class="row"><span>Formule</span><b>Demi-pension</b></div><div class="row"><span>Chambre</span><b>Deluxe double avec jacuzzi</b></div><div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Barcelo+Teguise+Beach" target="_blank">Itinéraire hôtel</a><a class="btn secondary" href="#pratique">Check-list</a></div></div><div class="panel"><h3>Parking CDG</h3><div class="row"><span>Parking</span><b>PARKINGS-PREMIER</b></div><div class="row"><span>Réservation</span><b>157BDLH</b></div><div class="row"><span>Arrivée</span><b>29/07 • 12h30</b></div><div class="btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Parking+Premier+CORA+Garges+Boulevard+de+la+Muette" target="_blank">Y aller</a><a class="btn secondary" href="tel:+33622450538">Appeler</a></div></div></section>
-<section id="explorer"><h2>🌋 Explorer Lanzarote</h2><div class="list"><div class="place"><div class="place-top"><b>Parc national de Timanfaya</b><span class="pill">Incontournable</span></div><p>Paysages volcaniques spectaculaires. À faire tôt le matin pour éviter la foule.</p><a class="maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Timanfaya+National+Park">Ouvrir dans Maps →</a></div><div class="place"><div class="place-top"><b>La Geria</b><span class="pill">Bodegas</span></div><p>Route des vignes volcaniques, dégustations et paysages uniques.</p><a class="maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=La+Geria+Lanzarote">Ouvrir dans Maps →</a></div><div class="place"><div class="place-top"><b>Jameos del Agua</b><span class="pill">Manrique</span></div><p>Un lieu emblématique entre art, lave et eau souterraine.</p><a class="maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Jameos+del+Agua">Ouvrir dans Maps →</a></div></div></section>
-<section id="plages"><h2>🏖️ Plages</h2><div class="list"><div class="place"><div class="place-top"><b>Playa de Papagayo</b><span class="pill">Eau turquoise</span></div><p>Magnifique baie abritée. Prévoir piste + parking payant selon période.</p><a class="maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Playa+de+Papagayo+Lanzarote">Itinéraire →</a></div><div class="place"><div class="place-top"><b>Playa de Famara</b><span class="pill">Coucher de soleil</span></div><p>Ambiance sauvage, falaises, photos incroyables. Souvent venteuse.</p><a class="maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Playa+de+Famara">Itinéraire →</a></div><div class="place"><div class="place-top"><b>Las Cucharas</b><span class="pill">Costa Teguise</span></div><p>Pratique près de l’hôtel, idéale pour une première journée tranquille.</p><a class="maps" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Playa+Las+Cucharas+Costa+Teguise">Itinéraire →</a></div></div></section>
-<section id="pratique"><h2>🧳 Pratique</h2><div class="panel"><h3>Avant de partir</h3><div class="check"><label><input type="checkbox"> Cartes d’identité / passeports</label><label><input type="checkbox"> Cartes d’embarquement</label><label><input type="checkbox"> Permis + carte bancaire caution voiture</label><label><input type="checkbox"> Crème solaire SPF 50</label><label><input type="checkbox"> Chargeurs + powerbank</label></div></div><div class="panel"><h3>Courses arrivée</h3><p class="small">Eau, apéro balcon, fromage de chèvre, chips, boissons fraîches, après-soleil. Objectif : profiter sans exploser le budget.</p></div><p class="footer-note">Lanzarote Companion • V3 Premium Home</p></section>
-<nav class="nav"><a class="active" href="#home"><span>🏠</span>Accueil</a><a href="#voyage"><span>✈️</span>Voyage</a><a href="#explorer"><span>🌋</span>Explorer</a><a href="#plages"><span>🏖️</span>Plages</a></nav>
-<script>
-const depart=new Date('2026-07-29T00:00:00');const today=new Date();const diff=Math.ceil((depart-today)/(1000*60*60*24));document.getElementById('days').textContent=diff>0?diff:'0';
-if('serviceWorker' in navigator){navigator.serviceWorker.register('./service-worker.js').catch(()=>{});} 
-</script>
-</body></html>
+  <main class="app">
+    <header class="hero" id="home">
+      <div class="topbar"><span class="pill">🌋 Privé • 4 voyageurs</span><span class="pill" id="localTime">Costa Teguise</span></div>
+      <div class="brand"><div class="eyebrow">Votre compagnon de voyage</div><h1 class="title">Lanzarote</h1><p class="subtitle">29 juillet → 13 août 2026<br/>Mylène • Pascal • Frédéric • Maïté</p><div class="count"><b id="daysLeft">—</b><span>jours<br/>avant le départ</span></div></div>
+      <div class="quick">
+        <a class="card wide" href="#today"><span class="icon">🌊</span><div><h3>Aujourd’hui</h3><p>Une idée simple selon l’envie du jour.</p></div></a>
+        <a class="card" href="#voyage"><span class="icon">✈️</span><div><h3>Mon voyage</h3><p>Vols, hôtel, parking, voiture.</p></div></a>
+        <a class="card" href="#explorer"><span class="icon">🗺️</span><div><h3>Explorer</h3><p>Volcans, plages, bodegas.</p></div></a>
+        <a class="card" href="#plages"><span class="icon">🏖️</span><div><h3>Plages</h3><p>Papagayo, Famara, Jablillo.</p></div></a>
+        <a class="card" href="#saveurs"><span class="icon">🍷</span><div><h3>Saveurs</h3><p>Bodegas et bonnes adresses.</p></div></a>
+      </div>
+    </header>
+
+    <section id="today"><div class="section-title"><h2>Aujourd’hui</h2><span>mode vacances</span></div><div class="panel"><p class="note">Choisissez selon votre énergie. L’application restera volontairement simple : une grosse sortie un jour sur deux, des journées douces entre deux.</p><div class="small-grid"><div class="mini"><strong>🏖️ Détente</strong><span>Jablillo + balade Costa Teguise</span></div><div class="mini"><strong>🌋 Découverte</strong><span>Timanfaya + La Geria</span></div><div class="mini"><strong>📸 Photos</strong><span>Famara au coucher du soleil</span></div><div class="mini"><strong>🍷 Goûter</strong><span>Bodegas de La Geria</span></div></div></div></section>
+
+    <section id="voyage"><div class="section-title"><h2>Mon voyage</h2><span>pratique</span></div><div class="panel"><div class="row"><span class="label">Hôtel</span><span class="value">Barceló Teguise Beach 4★</span></div><div class="row"><span class="label">Formule</span><span class="value">Demi-pension</span></div><div class="row"><span class="label">Départ</span><span class="value">29/07/2026 • CDG 15h15</span></div><div class="row"><span class="label">Retour</span><span class="value">13/08/2026 • CDG 00h10</span></div><div class="row"><span class="label">Parking CDG</span><span class="value">PARKINGS-PREMIER</span></div></div><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Barcel%C3%B3%20Teguise%20Beach" target="_blank">📍 Voir l’hôtel</a></section>
+
+    <section id="explorer"><div class="section-title"><h2>Explorer</h2><span>incontournables</span></div><div class="gallery"><article class="place"><span class="tag">Volcan</span><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80"/><div><h3>Timanfaya</h3><p>Le paysage volcanique à faire tôt le matin.</p></div></article><article class="place"><span class="tag">Vin</span><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"/><div><h3>La Geria</h3><p>Bodegas, dégustations et coucher de soleil.</p></div></article><article class="place"><span class="tag">Nord</span><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80"/><div><h3>Mirador del Río</h3><p>Vue spectaculaire sur La Graciosa.</p></div></article></div></section>
+
+    <section id="plages"><div class="section-title"><h2>Plages</h2><span>mer turquoise</span></div><div class="gallery"><article class="place"><span class="tag">Sud</span><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"/><div><h3>Papagayo</h3><p>La plus belle journée plage du séjour.</p></div></article><article class="place"><span class="tag">Costa Teguise</span><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"/><div><h3>El Jablillo</h3><p>Facile, proche, idéale pour une pause douce.</p></div></article><article class="place"><span class="tag">Sauvage</span><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80"/><div><h3>Famara</h3><p>Grandiose pour les photos et le coucher du soleil.</p></div></article></div></section>
+
+    <section id="saveurs"><div class="section-title"><h2>Saveurs</h2><span>à compléter</span></div><div class="panel"><p class="note">Ici on mettra les vraies bonnes adresses : restaurants vue mer, poissons, tapas, glaces, bodegas de La Geria et caves où acheter des bouteilles à rapporter.</p><div class="row"><span class="label">Priorité</span><span class="value">Bodegas + restos vue mer</span></div><div class="row"><span class="label">Budget midi</span><span class="value">15–25 €/pers.</span></div><div class="row"><span class="label">Apéro malin</span><span class="value">courses + balcon</span></div></div></section>
+
+    <nav class="tabs"><a class="active" href="#home"><b>🏠</b>Accueil</a><a href="#explorer"><b>🗺️</b>Explorer</a><a href="#voyage"><b>✈️</b>Voyage</a><a href="#saveurs"><b>🍷</b>Saveurs</a></nav>
+  </main>
+  <script>
+    const start = new Date('2026-07-29T15:15:00+02:00');
+    const now = new Date();
+    const diff = Math.ceil((start - now)/(1000*60*60*24));
+    document.getElementById('daysLeft').textContent = diff > 0 ? diff : '0';
+    try{document.getElementById('localTime').textContent = new Intl.DateTimeFormat('fr-FR',{timeZone:'Atlantic/Canary',hour:'2-digit',minute:'2-digit'}).format(new Date())+' aux Canaries'}catch(e){}
+    if('serviceWorker' in navigator){navigator.serviceWorker.register('service-worker.js').catch(()=>{});}
+  </script>
+</body>
+</html>
