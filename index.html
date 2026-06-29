@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <link rel="manifest" href="manifest.json">
+  <title>Lanzarote Companion</title>
+  <style>
+    :root{--bg:#0f172a;--card:#ffffff;--text:#111827;--muted:#6b7280;--accent:#f97316;--blue:#0ea5e9;--sand:#fff7ed;--green:#16a34a}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f4f4f5;color:var(--text)}
+    header{background:linear-gradient(135deg,#111827,#7c2d12);color:white;padding:34px 20px 28px;border-bottom-left-radius:28px;border-bottom-right-radius:28px;box-shadow:0 10px 30px rgba(0,0,0,.22)}
+    .eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:12px;opacity:.82} h1{font-size:38px;line-height:1;margin:12px 0 6px} .subtitle{opacity:.9;font-size:16px}.pill{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 12px;margin-top:14px;font-size:14px}
+    main{padding:18px;max-width:820px;margin:auto}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tile{background:white;border-radius:20px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,.08);text-decoration:none;color:inherit;min-height:100px}.tile b{display:block;font-size:17px;margin-top:8px}.tile span{font-size:13px;color:var(--muted)}
+    section{background:white;border-radius:24px;margin:16px 0;padding:20px;box-shadow:0 6px 18px rgba(15,23,42,.08)} h2{margin:0 0 14px;font-size:24px}.card{background:#f9fafb;border:1px solid #e5e7eb;border-radius:18px;padding:14px;margin:10px 0}.row{display:flex;gap:10px;justify-content:space-between;border-bottom:1px dashed #e5e7eb;padding:9px 0}.row:last-child{border-bottom:0}.label{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:#111827;color:#fff;text-decoration:none;border-radius:999px;padding:11px 14px;font-weight:700;margin:6px 6px 0 0}.btn.orange{background:var(--accent)}.btn.blue{background:var(--blue)}
+    .visit{border-left:5px solid var(--accent)}.beach{border-left:5px solid var(--blue)}.check label{display:block;padding:10px 0;border-bottom:1px solid #eee}.check input{transform:scale(1.25);margin-right:10px}footer{text-align:center;color:#777;padding:30px 10px 60px;font-size:13px}
+    @media(max-width:520px){h1{font-size:34px}.grid{grid-template-columns:1fr}main{padding:14px}section{border-radius:20px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Compagnon de voyage</div>
+  <h1>🌋 Lanzarote</h1>
+  <div class="subtitle">29 juillet → 13 août 2026 · Costa Teguise</div>
+  <div class="pill">Mylène · Pascal · Frédéric · Maïté</div>
+</header>
+<main>
+  <div class="grid">
+    <a class="tile" href="#voyage">✈️<b>Mon voyage</b><span>Vols, parking, hôtel</span></a>
+    <a class="tile" href="#aujourdhui">🌤️<b>Aujourd’hui</b><span>Idées simples selon l’envie</span></a>
+    <a class="tile" href="#visites">🌋<b>Visites</b><span>Les incontournables</span></a>
+    <a class="tile" href="#plages">🏖️<b>Plages</b><span>Baignade, snorkeling, détente</span></a>
+    <a class="tile" href="#courses">🛒<b>Courses</b><span>Liste d’arrivée</span></a>
+    <a class="tile" href="#valise">🧳<b>Valise</b><span>Check-list rapide</span></a>
+  </div>
+
+  <section id="voyage">
+    <h2>✈️ Mon voyage</h2>
+    <div class="card"><b>Aller</b><div class="row"><span class="label">Vol</span><span>EasyJet U24577</span></div><div class="row"><span class="label">Départ</span><span>CDG · 29/07 · 15h15</span></div><div class="row"><span class="label">Arrivée</span><span>ACE · 18h25</span></div></div>
+    <div class="card"><b>Retour</b><div class="row"><span class="label">Vol</span><span>EasyJet U24580</span></div><div class="row"><span class="label">Départ</span><span>ACE · 12/08 · 19h15</span></div><div class="row"><span class="label">Arrivée</span><span>CDG · 13/08 · 00h10</span></div></div>
+    <div class="card"><b>🚗 Parking CDG</b><div class="row"><span class="label">Parking</span><span>PARKINGS-PREMIER</span></div><div class="row"><span class="label">Réservation</span><span>157BDLH</span></div><div class="row"><span class="label">Arrivée</span><span>29/07 · 12h30</span></div><div class="row"><span class="label">Téléphone</span><span>06 22 45 05 38</span></div><a class="btn" href="https://maps.google.com/?q=PARKING%20PREMIER%20CORA%20Garges%20Boulevard%20de%20la%20Muette" target="_blank">📍 Itinéraire parking</a><a class="btn orange" href="tel:+33622450538">📞 Appeler</a></div>
+    <div class="card"><b>🏨 Hôtel</b><div class="row"><span class="label">Nom</span><span>Barceló Teguise Beach 4★ Adult Only</span></div><div class="row"><span class="label">Formule</span><span>Demi-pension</span></div><a class="btn blue" href="https://maps.google.com/?q=Barcelo%20Teguise%20Beach%20Costa%20Teguise" target="_blank">📍 Hôtel dans Maps</a></div>
+  </section>
+
+  <section id="aujourdhui"><h2>🌤️ Que fait-on aujourd’hui ?</h2><div class="card">😎 <b>Détente</b><br>Plage Las Cucharas / piscine / balade à Costa Teguise.</div><div class="card">🌋 <b>Découverte</b><br>Timanfaya + La Geria + El Golfo si vous voulez une vraie journée paysages.</div><div class="card">📸 <b>Photos</b><br>Famara, Mirador del Río, El Golfo ou Los Hervideros.</div><div class="card">🍴 <b>Gourmand</b><br>Tapas, poisson grillé, papas arrugadas et mojo.</div></section>
+
+  <section id="visites"><h2>🌋 Incontournables</h2>
+    <div class="card visit"><b>Timanfaya</b><br>Volcans · prévoir 2h · y aller tôt.<br><a class="btn" target="_blank" href="https://maps.google.com/?q=Timanfaya%20National%20Park%20Lanzarote">📍 Maps</a></div>
+    <div class="card visit"><b>La Geria</b><br>Vignes volcaniques · dégustation · très beau en fin de journée.<br><a class="btn" target="_blank" href="https://maps.google.com/?q=La%20Geria%20Lanzarote">📍 Maps</a></div>
+    <div class="card visit"><b>Jameos del Agua</b><br>César Manrique · grotte volcanique · lieu très photogénique.<br><a class="btn" target="_blank" href="https://maps.google.com/?q=Jameos%20del%20Agua">📍 Maps</a></div>
+    <div class="card visit"><b>Mirador del Río</b><br>Vue spectaculaire sur La Graciosa.<br><a class="btn" target="_blank" href="https://maps.google.com/?q=Mirador%20del%20Rio%20Lanzarote">📍 Maps</a></div>
+  </section>
+
+  <section id="plages"><h2>🏖️ Plages</h2><div class="card beach"><b>Las Cucharas</b><br>Proche hôtel · simple pour une première journée.</div><div class="card beach"><b>Jablillo</b><br>Petite baie agréable · eau souvent calme.</div><div class="card beach"><b>Papagayo</b><br>Carte postale · piste d’accès · prévoir eau et crème solaire.<br><a class="btn blue" target="_blank" href="https://maps.google.com/?q=Playa%20Papagayo%20Lanzarote">📍 Maps</a></div><div class="card beach"><b>Famara</b><br>Grandiose · vent · plutôt paysage que baignade tranquille.</div></section>
+
+  <section id="courses"><h2>🛒 Courses d’arrivée</h2><div class="check"><label><input type="checkbox"> Eau plate / pétillante</label><label><input type="checkbox"> Chips, crackers, olives</label><label><input type="checkbox"> Fromage local / charcuterie</label><label><input type="checkbox"> Cava ou vin blanc</label><label><input type="checkbox"> Crème solaire SPF50</label><label><input type="checkbox"> Après-soleil / aloe vera</label></div></section>
+
+  <section id="valise"><h2>🧳 Check-list valise</h2><div class="check"><label><input type="checkbox"> Carte d’identité / passeport</label><label><input type="checkbox"> Cartes d’embarquement</label><label><input type="checkbox"> Permis de conduire</label><label><input type="checkbox"> Chargeurs + powerbank</label><label><input type="checkbox"> Maillots de bain</label><label><input type="checkbox"> Lunettes de soleil / chapeau</label><label><input type="checkbox"> Médicaments personnels + ordonnance</label></div></section>
+</main>
+<footer>Lanzarote Companion · Version 1.0 · Moins chercher, plus profiter 🌋</footer>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./service-worker.js').catch(()=>{});}
+document.querySelectorAll('input[type="checkbox"]').forEach((box,i)=>{const k='lc_check_'+i; box.checked=localStorage.getItem(k)==='1'; box.addEventListener('change',()=>localStorage.setItem(k,box.checked?'1':'0'));});
+</script>
+</body>
+</html>
